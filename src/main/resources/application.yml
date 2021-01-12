@@ -31,8 +31,8 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
   redis:
     host: 121.196.148.78
-      port: 6379
-      database: 0
+    port: 6379
+    database: 0
 server:
   port: 8080
   servlet:

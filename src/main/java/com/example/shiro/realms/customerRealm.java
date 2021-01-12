@@ -3,6 +3,7 @@ package com.example.shiro.realms;
 import com.example.entity.Perms;
 import com.example.entity.User;
 import com.example.service.UserService;
+import com.example.util.MyByteSource;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -52,7 +53,7 @@ public class customerRealm extends AuthorizingRealm {
         if(ObjectUtils.isEmpty(user)){
             return null;
         }
-        return new SimpleAuthenticationInfo(user,user.getPassWord(), ByteSource.Util.bytes(user.getSalt()),getName());
-
+//        return new SimpleAuthenticationInfo(user,user.getPassWord(), ByteSource.Util.bytes(user.getSalt()),getName());
+        return new SimpleAuthenticationInfo(user,user.getPassWord(), new MyByteSource(user.getSalt()),getName());
     }
 }

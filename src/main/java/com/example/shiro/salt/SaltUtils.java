@@ -1,4 +1,4 @@
-package com.example.util;
+package com.example.shiro.salt;
 
 import java.util.Random;
 

@@ -2,10 +2,9 @@ package com.example.service.impl;
 
 import com.example.dao.UserDao;
 import com.example.entity.Perms;
-import com.example.entity.Role;
 import com.example.entity.User;
 import com.example.service.UserService;
-import com.example.util.SaltUtils;
+import com.example.shiro.salt.SaltUtils;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

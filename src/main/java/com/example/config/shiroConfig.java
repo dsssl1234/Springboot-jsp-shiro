@@ -1,5 +1,6 @@
 package com.example.config;
 
+import com.example.shiro.cache.RedisCacheManager;
 import com.example.shiro.realms.customerRealm;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.realm.Realm;
@@ -54,6 +55,17 @@ public class shiroConfig {
         //散列次数
         hashedCredentialsMatcher.setHashIterations(1024);
         userRealm.setCredentialsMatcher(hashedCredentialsMatcher);
+
+        //开启缓存管理
+        userRealm.setCacheManager(new RedisCacheManager());
+        //全局缓存
+        userRealm.setCachingEnabled(true);
+        //认证缓存
+        userRealm.setAuthenticationCachingEnabled(true);
+        userRealm.setAuthenticationCacheName("authenticationCache");
+        //授权缓存
+        userRealm.setAuthorizationCachingEnabled(true);
+        userRealm.setAuthorizationCacheName("authorizationCache");
         return userRealm;
     }
 }
