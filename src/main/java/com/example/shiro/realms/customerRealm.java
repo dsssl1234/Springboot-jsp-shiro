@@ -1,7 +1,6 @@
-package com.example.config.realms;
+package com.example.shiro.realms;
 
 import com.example.entity.Perms;
-import com.example.entity.Role;
 import com.example.entity.User;
 import com.example.service.UserService;
 import org.apache.shiro.authc.*;

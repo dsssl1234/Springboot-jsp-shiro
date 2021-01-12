@@ -1,6 +1,6 @@
 package com.example.config;
 
-import com.example.config.realms.customerRealm;
+import com.example.shiro.realms.customerRealm;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
