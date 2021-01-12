@@ -29,6 +29,10 @@ spring:
     username: root
     password: Admin123~.
     type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 121.196.148.78
+      port: 6379
+      database: 0
 server:
   port: 8080
   servlet:
@@ -40,3 +44,4 @@ logging:
   level:
     com:
       example: debug
+
